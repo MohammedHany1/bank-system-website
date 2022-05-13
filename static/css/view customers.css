@@ -1,0 +1,33 @@
+/* Start Landing Page */
+.landing-page table {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: aqua;
+}
+th, td {
+    border: 1px transparent white;
+    background-color: #0000008f;
+    padding: 10px;
+}
+table tr:nth-child(1) th:nth-child(1),
+table tr:nth-last-child(1) td:nth-child(1),
+table tr:nth-child(1) td:nth-last-child(1),
+table tr:nth-last-child(1) td:nth-last-child(1) {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.landing-page table {
+    width: 80%;
+    text-align: center;
+
+}
+/* End Landing Page */

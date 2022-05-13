@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    </head>
+    <body>
+        <!-- Start Navbar -->
+      <nav>
+        <div class="logo-container">
+            <a href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}" alt=""></a>
+        </div>
+        <div class="ul-container">
+            <ul>
+            <li><a href="{% url 'index' %}">Home</a> </li>
+            <li><a href="{% url 'viewCustomers' %}">View Customers</a> </li>
+            <li><a href="{% url 'transferHistory' %}">Transfer History</a> </li>
+            <li><a href="{% url 'createCustomer' %}">Create Customer</a> </li>
+        </ul>
+        </div>   
+    </nav>
+        <!-- End Navbar -->  
+    </body>
+</html>

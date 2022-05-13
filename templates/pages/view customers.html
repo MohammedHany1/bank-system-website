@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+{% load static %}
+<body>
+    <!-- Start Landing Page -->
+    <div class="landing-page"> 
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Operation</th>
+            </tr>
+            {% for customer in customers %}
+            <tr>
+                <td>{{customer.id}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.balance}}</td>
+                <td><a href="{% url 'transfer' customer.id %}" >Transfer</a>
+            </tr>
+            {% endfor %}
+        </table>       
+    </div>
+</body>
+</html>
+<!-- End Landing Page -->
+{% endblock content %}

@@ -1,0 +1,91 @@
+/* Start Global Variables */
+:root {
+    --main-color: #141517;
+    --secondary-color: #ff003c;
+    --head-color: RGB(11, 28, 56);
+}
+/* End Global Variables */
+/* Start Global Rules */
+html {
+    scroll-behavior: smooth;
+}
+*, body, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 92%;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Components */
+.landing-page table {
+   margin: 0 auto;
+   padding: 20px 0;
+    color: aqua;
+}
+th, td {
+    border: 1px transparent white;
+    background-color: #0000008f;
+    padding: 10px;
+}
+table tr:nth-child(1) th:nth-child(1),
+table tr:nth-last-child(1) td:nth-child(1),
+table tr:nth-child(1) td:nth-last-child(1),
+table tr:nth-last-child(1) td:nth-last-child(1) {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.landing-page table {
+    width: 80%;
+    text-align: center;
+
+}
+/* End Components */
+/* Start Landing Page */
+.landing-page {
+    width: 100%;
+    height: calc(100vh - 108px);
+    background: url(../image/count-money.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* End Landing Page */

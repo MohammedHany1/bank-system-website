@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/transfer.css' %}">
+</head>
+<body>
+<!-- Start Landing Page -->
+<div class="landing-page">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.balance}}</td>
+        </tr>
+    </table>    
+    <div class="message">
+        {% for message in messages %}
+        {{message}}
+        <br>
+        {% endfor %}
+    </div> 
+    <div class="container">
+        <form method="POST">    
+            <div class="cont">
+                {% csrf_token %}
+                <div class="form">
+                    <h3>Reciever Details</h3>
+                    <div class="row">
+                        <label for="name">Name</label>
+                        {{transferForm.reciever}}
+                    </div>
+                    <div class="row">
+                        <label for="amount">Amount</label>
+                        {{transferForm.amount}}
+                    </div> 
+                </div>
+                <div class="transfer-btn">
+                    <button type = "submit">Transfer</button>
+                </div>
+            </div>
+        </form>    
+    </div>
+</div>
+<!-- End Landing Page -->
+</body>
+</html>
+{% endblock content %}

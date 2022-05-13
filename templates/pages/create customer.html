@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/create customer.css' %}">
+</head>
+<body>
+    <!-- Start Landing Page -->
+    <div class="landing-page"> 
+        <form method="POST">    
+            {% csrf_token %}
+            <div class="row">
+                <label for="name">Name</label>
+                {{customerForm.name}}
+            </div>
+            <div class="row">
+                <label for="email">Email</label>
+                {{customerForm.email}}
+            </div>
+            <div class="row">
+                <label for="balance">Balance</label>
+                {{customerForm.balance}}
+            </div>
+            {% for message in messages %}
+            {{message}}
+            {% endfor %} <br>
+            <div class="transfer-btn">
+                <button type = "submit">Create Customer</button>
+            </div>
+        </form> 
+    </div>
+</body>
+</html>
+<!-- End Landing Page -->
+{% endblock content %}
